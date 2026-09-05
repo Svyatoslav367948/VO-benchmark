@@ -2,6 +2,12 @@
 
 A small Visual Odometry (VO) benchmarking toolkit for evaluating and comparing VO methods on standard datasets.
 
+## Original methods used in this benchmark
+
+- LEAP-VO @wrchen530/leapvo;
+- CoProU-VO @Jchao-Xie/CoProU;
+- DytanVO https://github.com/castacks/DytanVO?ysclid=mto4znjnjf1540868
+
 ## Overview
 
 VO-benchmark provides utilities to run VO methods on datasets, compute standard evaluation metrics (ATE, RPE, translation and rotation errors), and visualize results.
@@ -159,23 +165,3 @@ We appreciate the contributions of the following projects, which have greatly su
 * [RoGS](https://github.com/fzhiheng/RoGS) - Preprocessing code for the nuScenes dataset.
 
 * [DepthAnything-v2](https://github.com/DepthAnything/Depth-Anything-V2) and [DINOv2](https://github.com/facebookresearch/dinov2) – Providing Vision Transformer backbone features.
-
-## Original methods used in this benchmark
-
-- LEAP-VO @wrchen530/leapvo;
-- CoProU-VO @Jchao-Xie/CoProU;
-- DytanVO https://github.com/castacks/DytanVO?ysclid=mto4znjnjf1540868
-
-## License
-
-This project is licensed under the GNU General Public License v3.0.  
-See the [LICENSE](./LICENSE) file for more details.
-
-## If you find our work useful in your research, please consider citing our paper:
- 
-    @InProceedings{xie2025gcpr, 
-      title={CoProU-VO: Combining Projected Uncertainty for End-to-End Unsupervised Monocular Visual Odometry}, 
-      author={Xie, Jingchao and Dhaouadi, Oussema and Chen, Weirong and Meier, Johannes and Kaiser, Jacques and Cremers, Daniel}, 
-      booktitle= {DAGM German Conference on Pattern Recognition}, 
-      year={2025} 
-    }
