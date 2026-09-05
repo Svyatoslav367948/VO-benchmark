@@ -4,8 +4,8 @@ A small Visual Odometry (VO) benchmarking toolkit for evaluating and comparing V
 
 ## Original methods used in this benchmark
 
-- LEAP-VO @wrchen530/leapvo;
-- CoProU-VO @Jchao-Xie/CoProU;
+- LEAP-VO https://github.com/wrchen530/leapvo.git
+- CoProU-VO https://github.com/Jchao-Xie/CoProU.git
 - DytanVO https://github.com/castacks/DytanVO?ysclid=mto4znjnjf1540868
 
 ## Overview
