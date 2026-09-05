@@ -37,7 +37,7 @@ This is a suggested layout. Adjust to match the real repo structure.
 - Python 3.8+ (3.10 recommended)
 - pip
 
-Common Python packages used in VO benchmarking (add exact versions to requirements.txt):
+Common Python packages used in VO benchmarking:
 
 - numpy
 - scipy
@@ -60,13 +60,11 @@ Adjust the commands below to the actual script names in this repository.
 
 ```bash
 # download and unpack KITTI sequences into datasets/kitti/
-# run any dataset preprocessing scripts if available
-```
 
-2. Run a benchmark (example placeholder):
+2. Run a benchmark:
 
 ```bash
-python src/run_benchmark.py --method ORB-SLAM2 --dataset datasets/kitti --sequences 00 02 --output results/ORB-ORB
+python src/run_benchmark.py --method dytanvo --dataset datasets/kitti --sequences 00 02 --output results/ORB-ORB
 ```
 
 3. Evaluate results and visualize:
@@ -76,8 +74,6 @@ python src/evaluate.py --pred results/ORB-ORB/trajectory.txt --gt datasets/kitti
 python src/plot_results.py --input results/ --out figures/
 ```
 
-If your repository uses a different CLI or config format (YAML/JSON), update these examples accordingly.
-
 ## Configuration
 
 Use a config file (YAML/JSON) to define experiments. Example YAML structure:
@@ -86,18 +82,13 @@ Use a config file (YAML/JSON) to define experiments. Example YAML structure:
 method: dytanvo
 dataset: datasets/kitti
 sequences: [00, 02]
-params:
-  orb:
-    n_features: 2000
-  camera:
-    fps: 10
 ```
 
 ## Supported datasets (suggested)
 
-- KITTI odometry
-- TUM RGB-D
-- EuRoC MAV
+- DynaKITTI
+- TartanAir-shibuya
+- SINTEL
 
 Provide dataset adapters in `src/datasets/` that convert dataset ground-truth and poses into the repository's canonical format.
 
@@ -119,39 +110,4 @@ Save per-run outputs under `results/<method>/<dataset>/<sequence>/`. Include:
 - trajectory files (timestamped poses)
 - per-frame metrics/log
 - summary.json or summary.csv with aggregated metrics
-- plots and figures
-
-Provide helper scripts to aggregate result tables for multiple methods.
-
-## Contributing
-
-Contributions are welcome. Suggested workflow:
-
-1. Fork the repository
-2. Create a feature branch
-3. Add tests and documentation for your changes
-4. Open a pull request describing the change
-
-Please add issue templates and a CONTRIBUTING.md if you want more formal contribution guidelines.
-
-## License
-
-No license file is present in the repository metadata. If you want this project to be open source, add a LICENSE (for example, MIT) and update this section.
-
-## Contact
-
-If you need help tailoring this README to the actual repository contents, tell me which files or folders exist and I will update the instructions and quickstart commands to match.
-
-## Acknowledgement
- 
-We appreciate the contributions of the following projects, which have greatly supported our work:
-
-* [SfMLearner-Pytorch](https://github.com/ClementPinard/SfmLearner-Pytorch) - A pioneering framework for end-to-end monocular visual odometry.
-
-* [SC-Depth](https://github.com/JiawangBian/sc_depth_pl) - Our baseline.
- 
-* [Kitti-Odom-Eval-Python](https://github.com/Huangying-Zhan/kitti-odom-eval) - Python implementation for KITTI odometry evaluation.
-
-* [RoGS](https://github.com/fzhiheng/RoGS) - Preprocessing code for the nuScenes dataset.
-
-* [DepthAnything-v2](https://github.com/DepthAnything/Depth-Anything-V2) and [DINOv2](https://github.com/facebookresearch/dinov2) – Providing Vision Transformer backbone features.
+- plots
