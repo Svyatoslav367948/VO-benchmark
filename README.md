@@ -145,3 +145,37 @@ No license file is present in the repository metadata. If you want this project 
 ## Contact
 
 If you need help tailoring this README to the actual repository contents, tell me which files or folders exist and I will update the instructions and quickstart commands to match.
+
+## Acknowledgement
+ 
+We appreciate the contributions of the following projects, which have greatly supported our work:
+
+* [SfMLearner-Pytorch](https://github.com/ClementPinard/SfmLearner-Pytorch) - A pioneering framework for end-to-end monocular visual odometry.
+
+* [SC-Depth](https://github.com/JiawangBian/sc_depth_pl) - Our baseline.
+ 
+* [Kitti-Odom-Eval-Python](https://github.com/Huangying-Zhan/kitti-odom-eval) - Python implementation for KITTI odometry evaluation.
+
+* [RoGS](https://github.com/fzhiheng/RoGS) - Preprocessing code for the nuScenes dataset.
+
+* [DepthAnything-v2](https://github.com/DepthAnything/Depth-Anything-V2) and [DINOv2](https://github.com/facebookresearch/dinov2) – Providing Vision Transformer backbone features.
+
+## Original methods used in this benchmark
+
+- LEAP-VO @wrchen530/leapvo;
+- CoProU-VO @Jchao-Xie/CoProU;
+- DytanVO https://github.com/castacks/DytanVO?ysclid=mto4znjnjf1540868
+
+## License
+
+This project is licensed under the GNU General Public License v3.0.  
+See the [LICENSE](./LICENSE) file for more details.
+
+## If you find our work useful in your research, please consider citing our paper:
+ 
+    @InProceedings{xie2025gcpr, 
+      title={CoProU-VO: Combining Projected Uncertainty for End-to-End Unsupervised Monocular Visual Odometry}, 
+      author={Xie, Jingchao and Dhaouadi, Oussema and Chen, Weirong and Meier, Johannes and Kaiser, Jacques and Cremers, Daniel}, 
+      booktitle= {DAGM German Conference on Pattern Recognition}, 
+      year={2025} 
+    }
