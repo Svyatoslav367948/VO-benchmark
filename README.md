@@ -52,16 +52,6 @@ Optional tools:
 
 - evo (for trajectory evaluation and visualization): `pip install evo`
 
-Install dependencies (if requirements.txt exists):
-
-```bash
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-If `requirements.txt` is not present, create one and pin versions.
-
 ## Quickstart
 
 Adjust the commands below to the actual script names in this repository.
