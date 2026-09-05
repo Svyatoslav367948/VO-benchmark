@@ -1,14 +1,10 @@
 # VO-benchmark
 
-A small Visual Odometry (VO) benchmarking toolkit for evaluating and comparing VO / visual SLAM methods on standard datasets.
-
-> NOTE: This README was added automatically. Please update the usage examples, dataset paths, and commands below to match the actual scripts and file names in this repository.
+A small Visual Odometry (VO) benchmarking toolkit for evaluating and comparing VO methods on standard datasets.
 
 ## Overview
 
 VO-benchmark provides utilities to run VO methods on datasets, compute standard evaluation metrics (ATE, RPE, translation and rotation errors), and visualize results.
-
-This repository is currently private. If you want help customizing this README to match the repository's actual code, tell me which scripts or folders exist (for example `run_benchmark.py`, `src/`, `experiments/`, `datasets/`).
 
 ## Features
 
@@ -91,7 +87,7 @@ If your repository uses a different CLI or config format (YAML/JSON), update the
 Use a config file (YAML/JSON) to define experiments. Example YAML structure:
 
 ```yaml
-method: ORB-SLAM2
+method: dytanvo
 dataset: datasets/kitti
 sequences: [00, 02]
 params:
